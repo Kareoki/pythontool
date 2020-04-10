@@ -22,7 +22,12 @@ for line in f:
         wb.Save()
     
     elif str_list[0] == "-r":
-        continue
+         s.write(str_list[1]+"為"+ws.Range(str_list[1]).Value+"\n")
+        
   
     else:
         print("wrong")
+
+        
+#excel 欄位取值
+        #ws.Range(A1.Value)
