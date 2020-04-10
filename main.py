@@ -3,7 +3,7 @@ import win32com.client as win32
 import sys
 
 
-excel = win32.gencache.EnsureDispatch
+excel = win32.gencache.EnsureDispatch("Excel.Application")
 wb = excel.Workbooks.Open("C:\\Users\\Administrator\\Desktop\\python_excel.xlsx")
 excel.Visible = True
 ws = wb.Worksheets("工作表1")
