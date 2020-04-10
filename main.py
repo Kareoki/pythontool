@@ -14,17 +14,15 @@ s = open('save.txt','a+')
 s.readline()
 text = list()
 for line in f:
-  text.append(line)
-  string = text[0]
-  str_list = string.split(',')
+    str_list = line.split(',')
   
-  if str_list[0] == "-i":
-    ws.Range(str_list[1]).Value = str_list[2]
-    s.write(str_list[1]+"儲存成功")
-    wb.Save()
+    if str_list[0] == "-i":
+        ws.Range(str_list[1]).Value = str_list[2]
+        s.write(str_list[1]+"儲存成功"+"\n")
+        wb.Save()
     
-  elif str_list[0] == "-r":
-    continue
+    elif str_list[0] == "-r":
+        continue
   
-  else:
-    print("wrong")
+    else:
+        print("wrong")
